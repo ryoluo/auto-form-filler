@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Form Filler",
+  "version": "0.1",
+  "description": "Auto form filler for a compaign page",
+  "icons": {
+    "16": "icon/16.png",
+    "48": "icon/48.png",
+    "120": "icon/120.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://japan.supremenewyork.com/"],
+      "exclude_matches": ["https://japan.supremenewyork.com/confirm"],
+      "js": ["js/jquery-3.4.1.min.js", "js/fill.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Setting",
+    "default_popup": "index.html"
+  }
+}

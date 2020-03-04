@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Setting</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/load.js"></script>
+  </head>
+  <body>
+    <h1>Setting</h1>
+    <form id="form">
+      <input id="name" type="text" name="name" placeholder="your name" />
+      <input id="email" type="email" name="email" placeholder="email" />
+      <input id="phone" type="text" name="phone" placeholder="mobile phone" />
+      <input type="radio" id="radio-0" name="location" value="0" />
+      <label for="radio-0">Tokyo</label>
+      <input type="radio" id="radio-1" name="location" value="1" />
+      <label for="radio-1">Osaka</label>
+      <input type="radio" id="radio-2" name="location" value="2" />
+      <label for="radio-2">Nagoya</label>
+      <input type="radio" id="radio-3" name="location" value="3" />
+      <label for="radio-3">Fukuoka</label>
+      <input id="autoSubmit" type="checkbox" name="autoSubmit" />
+      <label for="autoSubmit">自動送信ON</label>
+    </form>
+    <button id="saveButton">Save</button>
+  </body>
+  <script src="js/save.js"></script>
+</html>
