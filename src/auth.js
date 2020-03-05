@@ -37,6 +37,9 @@ function hash(str) {
 }
 
 function loginSuccess() {
+  button.html("Activate");
+  button.prop("disabled", false);
+  $("#loginPassword").val("");
   chrome.storage.sync.set({
     auth: true
   });
