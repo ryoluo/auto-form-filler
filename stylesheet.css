@@ -1,0 +1,77 @@
+body {
+  width: 400px;
+  height: fit-content;
+  font-family: "Noto Sans JP", sans-serif;
+}
+#auth {
+  display: none;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+.title {
+  margin: 0;
+  padding-top: 13px;
+  padding-left: 10px;
+  color: red;
+  font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+  font-stretch: condensed;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+#loginForm {
+  width: 100%;
+}
+#loginForm input {
+  width: 250px;
+  display: block;
+  margin: 20px auto;
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+#loginButton {
+  position: relative;
+  height: 36px;
+  width: 150px;
+  background-image: none;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  margin: 25px auto;
+  font-size: 20px;
+  font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+  font-stretch: condensed;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  box-sizing: border-box;
+  border-top: 3px solid white;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-radius: 100%;
+  animation: spin 0.8s ease-out infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

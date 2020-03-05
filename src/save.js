@@ -14,3 +14,6 @@ document.getElementById("saveButton").onclick = () => {
   });
   alert("データが保存されました");
 };
+document.getElementById("resetButton").onclick = () => {
+  chrome.storage.sync.clear();
+};
