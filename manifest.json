@@ -16,7 +16,10 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://japan.supremenewyork.com/"],
+      "matches": [
+        "https://japan.supremenewyork.com/",
+        "https://ryoluo.github.io/auto-form-filler/"
+      ],
       "exclude_matches": ["https://japan.supremenewyork.com/confirm/"],
       "js": ["lib/jquery-3.4.1.min.js", "src/fill.js"]
     }

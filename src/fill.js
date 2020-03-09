@@ -32,11 +32,11 @@ $(function() {
     //   document.forms[0].submit();
     // }
   } else {
-    $(input[0]).val(info.name);
-    $(input[1]).val(info.email);
-    $(input[2]).val(info.phone);
-    $(input[3 + info.location]).prop("checked", true);
-    $(input[7]).prop("checked", true);
+    $(inputs[0]).val(info.name);
+    $(inputs[1]).val(info.email);
+    $(inputs[2]).val(info.phone);
+    $(inputs[3 + info.location]).prop("checked", true);
+    $(inputs[7]).prop("checked", true);
     if (info.autoSubmit) {
       document.forms[0].submit();
     }

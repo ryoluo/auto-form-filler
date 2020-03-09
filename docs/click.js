@@ -12,4 +12,5 @@ function send() {
   } else {
     alert("規約への同意が必要です。");
   }
+  return false;
 }
