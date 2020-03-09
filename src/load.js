@@ -1,13 +1,11 @@
 $(async () => {
-  $("#auth").hide();
   const auth = await isAuth();
   if (auth) {
-    $("#unauth").hide();
     $("#auth").show();
     chrome.storage.sync.get(
       ["name", "email", "phone", "location", "autoSubmit"],
       item => {
-        const form = document.getElementById("form");
+        const form = document.getElementById("saveForm");
         form.name.value = item.name ? item.name : "";
         form.email.value = item.email ? item.email : "";
         form.phone.value = item.phone ? item.phone : "";
@@ -15,6 +13,8 @@ $(async () => {
         form.autoSubmit.checked = item.autoSubmit ? true : false;
       }
     );
+  } else {
+    $("#unauth").show();
   }
 });
 

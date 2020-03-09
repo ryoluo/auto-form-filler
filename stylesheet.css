@@ -1,10 +1,9 @@
+/* Common */
 body {
   width: 400px;
   height: fit-content;
   font-family: "Noto Sans JP", sans-serif;
-}
-#auth {
-  display: none;
+  box-sizing: border-box;
 }
 .top {
   display: flex;
@@ -23,6 +22,12 @@ body {
   font-style: italic;
   letter-spacing: 0.5px;
 }
+#auth,
+#unauth {
+  display: none; /* デフォルトでは何も表示しない */
+}
+
+/* Login */
 #loginForm {
   width: 100%;
 }
@@ -74,4 +79,102 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Auth */
+.msg {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+  align-items: center;
+  margin-top: 15px;
+}
+.msg .msg-icon {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.msg .msg-text {
+  color: #4cbf50;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#saveForm {
+  width: 100%;
+}
+#saveForm input[type="text"],
+input[type="email"] {
+  width: 250px;
+  display: block;
+  margin: 10px auto;
+  height: 24px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.form-header {
+  width: 272px;
+  margin: 20px auto 5px;
+}
+.radios {
+  width: 272px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
+}
+.radios input {
+  width: 25px;
+  height: 16px;
+  display: block;
+  margin: 0;
+  margin-top: 2px;
+}
+.radios label {
+  width: 100px;
+  margin: 0;
+  margin-top: 2px;
+  font-size: 16px;
+}
+#saveButton {
+  position: relative;
+  height: 36px;
+  width: 150px;
+  background-image: none;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  margin: 30px auto;
+  font-size: 20px;
+  font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+  font-stretch: condensed;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auto-submit {
+  width: 272px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+.auto-submit input {
+  width: 25px;
+  height: 16px;
+  display: block;
+  margin: 0;
+  margin-top: 2px;
+}
+.auto-submit label {
+  width: 200px;
+  margin: 0;
+  margin-top: 2px;
+  font-size: 16px;
 }

@@ -25,11 +25,12 @@ $(function() {
     Location.reload();
   }
   if (inputs.length === 3) {
-    $(inputs[0]).prop("checked", true);
-    $(inputs[1]).val(info.email);
-    if (info.autoSubmit) {
-      document.forms[0].submit();
-    }
+    // フォームがクローズしている場合の処理
+    // $(inputs[0]).prop("checked", true);
+    // $(inputs[1]).val(info.email);
+    // if (info.autoSubmit) {
+    //   document.forms[0].submit();
+    // }
   } else {
     $(input[0]).val(info.name);
     $(input[1]).val(info.email);

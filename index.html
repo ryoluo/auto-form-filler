@@ -13,31 +13,40 @@
     <script src="src/load.js"></script>
   </head>
   <body>
+    <div class="top">
+      <img src="icon/48.png" alt="icon" />
+      <h1 class="title">Auto Form Filler</h1>
+    </div>
     <div id="auth">
-      <h1>Setting</h1>
-      <form id="form">
+      <div class="msg">
+        <img class="msg-icon" src="icon/check.svg" alt="" />
+        <p class="msg-text">アクティベート済み</p>
+      </div>
+      <form id="saveForm">
+        <p class="form-header">ご連絡先</p>
         <input id="name" type="text" name="name" placeholder="your name" />
         <input id="email" type="email" name="email" placeholder="email" />
         <input id="phone" type="text" name="phone" placeholder="mobile phone" />
-        <input type="radio" id="radio-0" name="location" value="0" />
-        <label for="radio-0">Tokyo</label>
-        <input type="radio" id="radio-1" name="location" value="1" />
-        <label for="radio-1">Osaka</label>
-        <input type="radio" id="radio-2" name="location" value="2" />
-        <label for="radio-2">Nagoya</label>
-        <input type="radio" id="radio-3" name="location" value="3" />
-        <label for="radio-3">Fukuoka</label>
-        <input id="autoSubmit" type="checkbox" name="autoSubmit" />
-        <label for="autoSubmit">自動送信ON</label>
+        <p class="form-header">ロケーション選択</p>
+        <div class="radios">
+          <input type="radio" id="radio-0" name="location" value="0" />
+          <label for="radio-0">Tokyo</label>
+          <input type="radio" id="radio-1" name="location" value="1" />
+          <label for="radio-1">Osaka</label>
+          <input type="radio" id="radio-2" name="location" value="2" />
+          <label for="radio-2">Nagoya</label>
+          <input type="radio" id="radio-3" name="location" value="3" />
+          <label for="radio-3">Fukuoka</label>
+        </div>
+        <p class="form-header">その他設定</p>
+        <div class="auto-submit">
+          <input id="autoSubmit" type="checkbox" name="autoSubmit" />
+          <label for="autoSubmit">自動送信を有効にする</label>
+        </div>
       </form>
       <button id="saveButton">Save</button>
-      <button id="resetButton">Reset</button>
     </div>
     <div id="unauth">
-      <div class="top">
-        <img src="icon/48.png" alt="icon" />
-        <h1 class="title">Auto Form Filler</h1>
-      </div>
       <form id="loginForm">
         <input
           id="loginEmail"

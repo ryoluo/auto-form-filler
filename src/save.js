@@ -1,5 +1,5 @@
-document.getElementById("saveButton").onclick = () => {
-  const form = document.getElementById("form");
+$("#saveButton").on("click", () => {
+  const form = document.getElementById("saveForm");
   const name = form.name.value;
   const email = form.email.value;
   const phone = form.phone.value;
@@ -13,7 +13,7 @@ document.getElementById("saveButton").onclick = () => {
     autoSubmit: autoSubmit
   });
   alert("データが保存されました");
-};
+});
 
 $("#resetButton").on("click", () => {
   chrome.storage.sync.clear();
