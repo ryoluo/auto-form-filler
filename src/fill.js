@@ -21,6 +21,9 @@ $(function() {
   const inputs = $("input").filter((i, el) => {
     return $(el).attr("type") != "hidden";
   });
+  const submitButton = $("input").filter((i, el) => {
+    return $(el).attr("type") == "submit";
+  })[0];
   if (inputs.length === 0) {
     Location.reload();
   }
@@ -38,8 +41,7 @@ $(function() {
     $(inputs[3 + parseInt(info.location)]).prop("checked", true);
     $(inputs[7]).prop("checked", true);
     if (info.autoSubmit) {
-      console.log($("form"));
-      $("form").submit();
+      $(submitButton).click();
     }
   }
 });
