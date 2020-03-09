@@ -35,10 +35,12 @@ $(function() {
     $(inputs[0]).val(info.name);
     $(inputs[1]).val(info.email);
     $(inputs[2]).val(info.phone);
-    $(inputs[3 + info.location]).prop("checked", true);
+    $(inputs[3 + parseInt(info.location)]).prop("checked", true);
     $(inputs[7]).prop("checked", true);
     if (info.autoSubmit) {
-      document.forms[0].submit();
+      console.log(document.forms);
+      const form = document.forms[0];
+      form.submit();
     }
   }
 });
