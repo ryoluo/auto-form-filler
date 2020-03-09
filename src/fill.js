@@ -38,9 +38,8 @@ $(function() {
     $(inputs[3 + parseInt(info.location)]).prop("checked", true);
     $(inputs[7]).prop("checked", true);
     if (info.autoSubmit) {
-      console.log(document.forms);
-      const form = document.forms[0];
-      form.submit();
+      console.log($("form"));
+      $("form").submit();
     }
   }
 });
