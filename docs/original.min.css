@@ -112,8 +112,7 @@ a:hover {
 #signup label {
   font-size: 0.8em;
 }
-#signup input[type="email"],
-input[type="text"] {
+#signup input[type="email"] {
   padding: 6px 8px;
   vertical-align: top;
   border-radius: 4px;

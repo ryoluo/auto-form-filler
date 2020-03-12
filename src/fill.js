@@ -1,4 +1,5 @@
 const info = {
+  auth: false,
   name: "",
   email: "",
   phone: null,
@@ -7,8 +8,9 @@ const info = {
 };
 
 chrome.storage.sync.get(
-  ["name", "email", "phone", "location", "autoSubmit"],
+  ["auth", "name", "email", "phone", "location", "autoSubmit"],
   values => {
+    info.auth = values.auth ? true : false;
     info.name = values.name ? values.name : "";
     info.email = values.email ? values.email : "";
     info.phone = values.phone ? values.phone : "";
@@ -17,31 +19,27 @@ chrome.storage.sync.get(
   }
 );
 
-$(function() {
-  const inputs = $("input").filter((i, el) => {
-    return $(el).attr("type") != "hidden";
-  });
-  const submitButton = $("input").filter((i, el) => {
-    return $(el).attr("type") == "submit";
-  })[0];
-  if (inputs.length === 0) {
-    Location.reload();
-  }
-  if (inputs.length === 3) {
-    // フォームがクローズしている場合の処理
-    // $(inputs[0]).prop("checked", true);
-    // $(inputs[1]).val(info.email);
-    // if (info.autoSubmit) {
-    //   document.forms[0].submit();
-    // }
-  } else {
-    $(inputs[0]).val(info.name);
-    $(inputs[1]).val(info.email);
-    $(inputs[2]).val(info.phone);
-    $(inputs[3 + parseInt(info.location)]).prop("checked", true);
-    $(inputs[7]).prop("checked", true);
-    if (info.autoSubmit) {
-      $(submitButton).click();
+$(() => {
+  if (info.auth) {
+    const inputs = $("input").filter((i, el) => {
+      return $(el).attr("type") != "hidden";
+    });
+    const submitButton = $("input").filter((i, el) => {
+      return $(el).attr("type") == "submit";
+    })[0];
+    if (inputs.length < 4) {
+      setTimeout(() => {
+        // location.reload();
+      }, 1000);
+    } else {
+      $(inputs[0]).val(info.name);
+      $(inputs[1]).val(info.email);
+      $(inputs[2]).val(info.phone);
+      $(inputs[3 + parseInt(info.location)]).prop("checked", true);
+      $(inputs[7]).prop("checked", true);
+      if (info.autoSubmit) {
+        $(submitButton).click();
+      }
     }
   }
 });
