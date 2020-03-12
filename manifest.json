@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Auto Form Filler",
+  "name": "SLYP-Supreme 自動抽選BOT",
   "version": "0.1",
-  "description": "Auto form filler for a compaign page",
+  "description": "Bot tool for Supreme compaign page",
   "icons": {
     "16": "icon/16.png",
     "48": "icon/48.png",
@@ -25,7 +25,7 @@
     }
   ],
   "browser_action": {
-    "default_title": "Auto Form Filler",
+    "default_title": "SLYP-Supreme 自動抽選BOT",
     "default_popup": "index.html"
   }
 }

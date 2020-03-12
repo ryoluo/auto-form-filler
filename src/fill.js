@@ -22,14 +22,14 @@ chrome.storage.sync.get(
 $(() => {
   if (info.auth) {
     const inputs = $("input").filter((i, el) => {
-      return $(el).attr("type") != "hidden";
+      return $(el).attr("type") != "hidden" && $(el).css("display") != "none";
     });
     const submitButton = $("input").filter((i, el) => {
       return $(el).attr("type") == "submit";
     })[0];
-    if (inputs.length < 4) {
+    if (inputs.length < 5) {
       setTimeout(() => {
-        // location.reload();
+        location.reload();
       }, 1000);
     } else {
       $(inputs[0]).val(info.name);
