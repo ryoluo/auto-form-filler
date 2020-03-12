@@ -30,9 +30,12 @@
           </div>
         </div>
         <!-- content -->
-        <form id="register" action="/" accept-charset="UTF-8" method="post">
+        <form id="register" action="#" onsubmit="send(); return false;">
           <div class="row justify-content-center">
             <div class="col col-lg-4">
+              <h3 class="text-danger mt-4">
+                このページは正規のサイトと異なる、<br />テスト用ページです
+              </h3>
               <p class="description mt-4" lang="ja">
                 2020年03月14日(土)にご入店を希望されるお客様は、ご来店されるご本人様のお名前(ご来店時にご本人様確認を行うため、ご持参いただく有効な身分書原本と同一又は確認が可能な表記にてご入力ください。氏名の間にはスペースを入れ、ローマ字にて入力してください。)、Eメールアドレス、携帯電話番号をご入力の上、ご希望の店舗を選択して下さい。
               </p>
@@ -46,7 +49,7 @@
               <p class="description mb-1" lang="en">Contact information</p>
               ​
               <input
-                name="05d58e1fdc6a2b154302e50f5870f465"
+                name="name"
                 placeholder="your name"
                 size="50"
                 maxlength="50"
@@ -55,7 +58,7 @@
                 value=""
               />
               <input
-                name="8cc100389c0bbf39fc8a4c06f8ad3296"
+                name="email"
                 size="50"
                 maxlength="50"
                 placeholder="email"
@@ -73,7 +76,7 @@
                 value=""
               />
               <input
-                name="ec51355f5c621ff9a3c60418fd6ce4f4"
+                name="phone"
                 size="50"
                 maxlength="50"
                 placeholder="mobile phone"
@@ -187,7 +190,9 @@
         </form>
         <div id="footer" class="row justify-content-center">
           <div class="col col-lg-4">
-            <a href="https://lotus-base.com" target="_blank">Created by</a>
+            <a href="https://lotus-base.com" target="_blank"
+              >Created by ryoluo</a
+            >
           </div>
         </div>
       </div>
