@@ -18,7 +18,7 @@
     {
       "matches": [
         "https://japan.supremenewyork.com/",
-        "https://ryoluo.github.io/auto-form-filler/"
+        "https://ryoluo.github.io/*"
       ],
       "exclude_matches": ["https://japan.supremenewyork.com/confirm/"],
       "js": ["lib/jquery-3.4.1.min.js", "src/fill.js"]
