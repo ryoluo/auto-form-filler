@@ -109,7 +109,9 @@ body {
   width: 100%;
 }
 #saveForm input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="date"],
+input[type="time"] {
   width: 250px;
   display: block;
   margin: 10px auto;
@@ -118,6 +120,7 @@ input[type="email"] {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 5px 10px;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .form-header {
   width: 272px;
@@ -164,20 +167,21 @@ input[type="email"] {
   align-items: center;
   justify-content: center;
 }
-.auto-submit {
+.check-wrapper {
+  margin-bottom: 15px;
   width: 272px;
   display: flex;
   margin: auto;
   align-items: center;
 }
-.auto-submit input {
+.check-wrapper input {
   width: 25px;
   height: 16px;
   display: block;
   margin: 0;
   margin-top: 2px;
 }
-.auto-submit label {
+.check-wrapper label {
   width: 200px;
   margin: 0;
   margin-top: 2px;

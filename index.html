@@ -39,9 +39,14 @@
           <label for="radio-3">Fukuoka</label>
         </div>
         <p class="form-header">その他設定</p>
-        <div class="auto-submit">
-          <input id="autoSubmit" type="checkbox" name="autoSubmit" />
-          <label for="autoSubmit">自動送信を有効にする</label>
+        <div class="check-wrapper">
+          <input id="needReload" type="checkbox" name="needReload" />
+          <label for="needReload">自動更新を有効にする</label>
+        </div>
+        <p class="form-header">開始日時</p>
+        <div class="datetime">
+          <input id="date" name="date" type="date" />
+          <input id="time" name="time" type="time" />
         </div>
       </form>
       <button id="saveButton">Save</button>
