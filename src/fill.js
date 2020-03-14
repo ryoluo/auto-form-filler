@@ -3,8 +3,7 @@ const info = {
   name: "",
   email: "",
   phone: null,
-  location: 0,
-  autoSubmit: false
+  location: 0
 };
 
 chrome.storage.sync.get(
@@ -15,7 +14,6 @@ chrome.storage.sync.get(
     info.email = values.email ? values.email : "";
     info.phone = values.phone ? values.phone : "";
     info.location = values.location ? values.location : 0;
-    info.autoSubmit = values.autoSubmit ? true : false;
   }
 );
 
@@ -29,17 +27,37 @@ $(() => {
     })[0];
     if (inputs.length < 5) {
       setTimeout(() => {
-        location.reload();
+        tryReload();
       }, 1000);
+      setInterval(() => {
+        tryReload();
+      }, 1000 * 5);
     } else {
       $(inputs[0]).val(info.name);
       $(inputs[1]).val(info.email);
       $(inputs[2]).val(info.phone);
       $(inputs[3 + parseInt(info.location)]).prop("checked", true);
       $(inputs[7]).prop("checked", true);
-      if (info.autoSubmit) {
-        $(submitButton).click();
-      }
+      $(submitButton).click();
     }
   }
 });
+
+function tryReload() {
+  chrome.storage.sync.get(["needReload", "date", "time"], values => {
+    const needReload = values.needReload ? true : false;
+    const date = values.date ? values.date : null;
+    const time = values.time ? values.time : null;
+    if (needReload) {
+      const now = new Date();
+      const ymd = date.split("-");
+      ymd[1]--;
+      const hi = time.split(":");
+      const ymdhi = ymd.concat(hi);
+      const start = new Date(...ymdhi);
+      if (now.getTime() >= start.getTime()) {
+        location.reload();
+      }
+    }
+  });
+}
