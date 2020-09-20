@@ -1,232 +1,153 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="”robots”" content="”noindex,nofollow”" />
-    <title>Supreme</title>
-    <link href="bootstrap.min.css" rel="stylesheet" />
-    <link href="original.min.css" rel="stylesheet" />
-    <script src="click.js"></script>
-  </head>
-  <body>
-    <language initial="ja" lang="ja,en" style="display: none;"></language>
-    <div class="wrapper">
-      <div class="container-fluid">
-        <!-- header -->
-        <div id="header" class="row justify-content-center">
-          <div class="col col-lg-4 flex-xs-middle align-self-center">
-            <p id="head_bit">
-              <time id="date">
-                <b>00/00/0000 00:00:00am</b><span id="time-zone-name">JPN</span>
-              </time>
-              <a data-turbolinks="false" href="/"
-                ><img id="signup_logo" src="logo.png" alt="Supreme"
-              /></a>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="”robots”" content="”noindex,nofollow”" />
+  <title>Supreme</title>
+  <link href="bootstrap.min.css" rel="stylesheet" />
+  <link href="original.min.css" rel="stylesheet" />
+  <script src="click.js"></script>
+</head>
+
+<body>
+  <language initial="ja" lang="ja,en" style="display: none;"></language>
+  <div class="wrapper">
+    <div class="container-fluid">
+      <!-- header -->
+      <div id="header" class="row justify-content-center">
+        <div class="col col-lg-4 flex-xs-middle align-self-center">
+          <p id="head_bit">
+            <time id="date">
+              <b>00/00/0000 00:00:00am</b><span id="time-zone-name">JPN</span>
+            </time>
+            <a data-turbolinks="false" href="/"><img id="signup_logo" src="logo.png" alt="Supreme" /></a>
+          </p>
+        </div>
+      </div>
+      <!-- content -->
+      <form id="register" action="#" onsubmit="send(); return false;">
+        <div class="row justify-content-center">
+          <div class="col col-lg-4">
+            <h3 class="text-danger mt-4">
+              このページは正規のサイトと異なる、<br />テスト用ページです
+            </h3>
+            <p class="description mt-4" lang="ja">
+              2020年03月14日(土)にご入店を希望されるお客様は、ご来店されるご本人様のお名前(ご来店時にご本人様確認を行うため、ご持参いただく有効な身分書原本と同一又は確認が可能な表記にてご入力ください。氏名の間にはスペースを入れ、ローマ字にて入力してください。)、Eメールアドレス、携帯電話番号をご入力の上、ご希望の店舗を選択して下さい。
             </p>
+            <p class="description mt-4" lang="en">
+              To attend this week’s release on 14/03/2020 (Sat), please enter
+              your name(the same description as the valid original ID to
+              bring. A space is required between first name and last name.),
+              mobile phone number and email address.
+            </p>
+            <p class="description mb-1" lang="ja">ご連絡先</p>
+            <p class="description mb-1" lang="en" style="display: none;">Contact information</p>
+
+            <input name="ae1cef65dee18a06fa58a46bb65a051e" placeholder="your name" size="50" maxlength="50"
+              class="form-control" autocomplete="off" value="">
+            <input name="a0d2b002bc6f257b401ca114404171c2" size="50" maxlength="50" placeholder="email"
+              class="form-control" autocomplete="off" value="">
+            <input name="1200586a99081b5259fbcaf08ac9bea0" size="50" maxlength="50" placeholder="mobile phone"
+              class="form-control" style="display:none" autocomplete="off" value="">
+            <input name="b6b8ca5b8c59b0442f8bb041979bc2b8" size="50" maxlength="50" placeholder="mobile phone"
+              class="form-control" autocomplete="off" value="">
+
+            <p class="description mt-3 mb-1" lang="ja">ロケーション選択</p>
+            <p class="description mt-3 mb-1" lang="en" style="display: none;">Location</p>
+
+            <div class="location">
+              <div class="form-radio mb-0">
+                <input type="radio" name="area" value="tokyo" id="area_tokyo" class="form-check-input">
+                <label for="area_tokyo" class="form-check-label">Tokyo<br></label>
+              </div>
+              <div class="form-radio mb-0">
+                <input type="radio" name="area" value="osaka" id="area_osaka" class="form-check-input">
+                <label for="area_osaka" class="form-check-label">Osaka<br></label>
+              </div>
+              <div class="form-radio mb-0">
+                <input type="radio" name="area" value="nagoya" id="area_nagoya" class="form-check-input">
+                <label for="area_nagoya" class="form-check-label">Nagoya<br></label>
+              </div>
+              <div class="form-radio mb-0">
+                <input type="radio" name="area" value="fukuoka" id="area_fukuoka" class="form-check-input">
+                <label for="area_fukuoka" class="form-check-label">Fukuoka<br></label>
+              </div>
+            </div>
+
+            <div class="annotation mb-2" lang="ja">
+              ※東京店舗(原宿、渋谷、代官山)については3店舗のうちいずれかにご案内いたします。なお、お客様にてご希望の店舗を選択いただけませんので、ご了承ください。<br>※入店の権利を得られ、入店番号が確定されたにもかかわらず、当日のご来店が確認できなかったお客様は、以後、本サイトの登録に参加ができなくなります。<br>※こちらに入力した情報は暗号化され、ご本人様確認のためのみに使用され、使用後は適切に処理されます。<br>※携帯電話端末・有効な身分書原本は、ご本人様確認に使用いたしますので、ご来店時に必ずご持参して下さい。
+            </div>
+            <div class="annotation mb-2" lang="en" style="display: none;">*Tokyo location includes our Harajuku,
+              Shibuya, and Daikanyama stores. Once registered and capacity pending, you may be offered a place in line,
+              at random.<br>*Failure to show up will result from future sing-up lists.<br>*Information entered at the
+              site will be encrypted, will be used for the authentication of the person and will be properly managed
+              after use.<br>*A mobile phone and a valid original ID will be used for the authentication of the person.
+              They must be on the person at the time of the store visit.</div>
+
+            <a href="https://japan.supremenewyork.com/terms_and_conditions#jp" target="_blank" class="agreement"
+              lang="ja">個人情報の取扱・利用規約</a>
+            <a href="https://japan.supremenewyork.com/terms_and_conditions#en" target="_blank" class="agreement"
+              lang="en" style="display: none;">TERMS AND CONDITIONS</a>
+            <p class="form-check">
+              <input type="checkbox" name="agree" id="agree" class="form-check-input">
+              <label for="agree" class="form-check-label" lang="ja">上記の個人情報の取扱及び利用規約を確認しました。<br>内容に同意します。<br></label>
+              <label for="agree" class="form-check-label" lang="en" style="display: none;">I have read and agree to the
+                terms &amp; conditions and the handling of personal information above.</label>
+            </p>
+
+            <input type="hidden" name="token" value="75S-VJswT9H2ur2F_SBTeYTCakHwuZNkIBsUAeXiLQE">
+            <input type="hidden" name="formid" value="62e8036fdca9ec485edd1ac65a9d395a">
+            <input type="hidden" name="language" value="ja">
+            <input type="submit" name="commit" value="Continue" class="btn btn-default">
           </div>
         </div>
-        <!-- content -->
-        <form id="register" action="#" onsubmit="send(); return false;">
-          <div class="row justify-content-center">
-            <div class="col col-lg-4">
-              <h3 class="text-danger mt-4">
-                このページは正規のサイトと異なる、<br />テスト用ページです
-              </h3>
-              <p class="description mt-4" lang="ja">
-                2020年03月14日(土)にご入店を希望されるお客様は、ご来店されるご本人様のお名前(ご来店時にご本人様確認を行うため、ご持参いただく有効な身分書原本と同一又は確認が可能な表記にてご入力ください。氏名の間にはスペースを入れ、ローマ字にて入力してください。)、Eメールアドレス、携帯電話番号をご入力の上、ご希望の店舗を選択して下さい。
-              </p>
-              <p class="description mt-4" lang="en">
-                To attend this week’s release on 14/03/2020 (Sat), please enter
-                your name(the same description as the valid original ID to
-                bring. A space is required between first name and last name.),
-                mobile phone number and email address.
-              </p>
-              <p class="description mb-1" lang="ja">ご連絡先</p>
-              <p class="description mb-1" lang="en">Contact information</p>
-              ​
-              <input
-                name="name"
-                placeholder="your name"
-                size="50"
-                maxlength="50"
-                class="form-control"
-                autocomplete="off"
-                value=""
-              />
-              <input
-                name="email"
-                size="50"
-                maxlength="50"
-                placeholder="email"
-                class="form-control"
-                autocomplete="off"
-                value=""
-              />
-              <input
-                name="a6aec64c35c422508208471518e7096c"
-                size="50"
-                maxlength="50"
-                placeholder="mobile phone"
-                class="form-control d-none"
-                autocomplete="off"
-                value=""
-              />
-              <input
-                name="phone"
-                size="50"
-                maxlength="50"
-                placeholder="mobile phone"
-                class="form-control"
-                autocomplete="off"
-                value=""
-              />
-              ​
-              <p class="description mt-3 mb-1" lang="ja">ロケーション選択</p>
-              <p class="description mt-3 mb-1" lang="en">Location</p>
-              ​
-              <div class="location">
-                <div class="form-radio mb-0">
-                  <input
-                    type="radio"
-                    name="area"
-                    value="tokyo"
-                    id="area_tokyo"
-                    class="form-check-input"
-                  />
-                  <label for="area_tokyo" class="form-check-label">Tokyo</label>
-                </div>
-                <div class="form-radio mb-0">
-                  <input
-                    type="radio"
-                    name="area"
-                    value="osaka"
-                    id="area_osaka"
-                    class="form-check-input"
-                  />
-                  <label for="area_osaka" class="form-check-label">Osaka</label>
-                </div>
-                <div class="form-radio mb-0">
-                  <input
-                    type="radio"
-                    name="area"
-                    value="nagoya"
-                    id="area_nagoya"
-                    class="form-check-input"
-                  />
-                  <label for="area_nagoya" class="form-check-label"
-                    >Nagoya</label
-                  >
-                </div>
-                <div class="form-radio mb-0">
-                  <input
-                    type="radio"
-                    name="area"
-                    value="fukuoka"
-                    id="area_fukuoka"
-                    class="form-check-input"
-                  />
-                  <label for="area_fukuoka" class="form-check-label"
-                    >Fukuoka</label
-                  >
-                </div>
-              </div>
-              <div class="annotation mb-2" lang="ja">
-                ※東京店舗(原宿、渋谷、代官山)については3店舗のうちいずれかにご案内いたします。なお、お客様にてご希望の店舗を選択いただけませんので、ご了承ください。※入店の権利を得られ、入店番号が確定されたにもかかわらず、当日のご来店が確認できなかったお客様は、以後、本サイトの登録に参加ができなくなります。※こちらに入力した情報は暗号化され、ご本人様確認のためのみに使用され、使用後は適切に処理されます。※携帯電話端末・有効な身分書原本は、ご本人様確認に使用いたしますので、ご来店時に必ずご持参して下さい。
-              </div>
-              <div class="annotation mb-2" lang="en">
-                *Tokyo location includes our Harajuku, Shibuya, and Daikanyama
-                stores. Once registered and capacity pending, you may be offered
-                a place in line, at random.*Failure to show up will result from
-                future sing-up lists.*Information entered at the site will be
-                encrypted, will be used for the authentication of the person and
-                will be properly managed after use.*A mobile phone and a valid
-                original ID will be used for the authentication of the person.
-                They must be on the person at the time of the store visit.
-              </div>
-              <a href="#" target="_blank" class="agreement" lang="ja"
-                >個人情報の取扱・利用規約</a
-              >
-              <a href="#" target="_blank" class="agreement" lang="en"
-                >TERMS AND CONDITIONS</a
-              >
-              <p class="form-check">
-                <input
-                  type="checkbox"
-                  name="agree"
-                  id="agree"
-                  class="form-check-input"
-                />
-                <label for="agree" class="form-check-label" lang="ja"
-                  >上記の個人情報の取扱及び利用規約を確認しました。内容に同意します。</label
-                >
-                <label for="agree" class="form-check-label" lang="en"
-                  >I have read and agree to the terms & conditions and the
-                  handling of personal information above.</label
-                >
-              </p>
-              <input
-                type="hidden"
-                name="token"
-                value="nFzh1C22b3BxImoMiliBo-YaoDfw_ZwFE3DUjVCo-kM"
-              />
-              <input
-                type="hidden"
-                name="formid"
-                value="62e8036fdca9ec485edd1ac65a9d395a"
-              />
-              <input type="hidden" name="language" value="" />
-              <input
-                type="submit"
-                name="commit"
-                value="Continue"
-                class="btn btn-default"
-              />
-            </div>
-          </div>
-        </form>
-        <div id="footer" class="row justify-content-center">
-          <div class="col col-lg-4">
-            <a href="https://lotus-base.com" target="_blank"
-              >Created by ryoluo</a
-            >
-          </div>
+      </form>
+      <div id="footer" class="row justify-content-center">
+        <div class="col col-lg-4">
+          <a href="https://lotus-base.com" target="_blank">Created by ryoluo</a>
         </div>
       </div>
     </div>
-    <style>
-      .tb_button {
-        padding: 1px;
-        cursor: pointer;
-        border-right: 1px solid #8b8b8b;
-        border-left: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-      }
-      .tb_button.hover {
-        border: 2px outset #def;
-        background-color: #f8f8f8 !important;
-      }
-      .ws_toolbar {
-        z-index: 100000;
-      }
-      .ws_toolbar .ws_tb_btn {
-        cursor: pointer;
-        border: 1px solid #555;
-        padding: 3px;
-      }
-      .tb_highlight {
-        background-color: yellow;
-      }
-      .tb_hide {
-        visibility: hidden;
-      }
-      .ws_toolbar img {
-        padding: 2px;
-        margin: 0px;
-      }
-    </style>
-  </body>
+  </div>
+  <style>
+    .tb_button {
+      padding: 1px;
+      cursor: pointer;
+      border-right: 1px solid #8b8b8b;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    .tb_button.hover {
+      border: 2px outset #def;
+      background-color: #f8f8f8 !important;
+    }
+
+    .ws_toolbar {
+      z-index: 100000;
+    }
+
+    .ws_toolbar .ws_tb_btn {
+      cursor: pointer;
+      border: 1px solid #555;
+      padding: 3px;
+    }
+
+    .tb_highlight {
+      background-color: yellow;
+    }
+
+    .tb_hide {
+      visibility: hidden;
+    }
+
+    .ws_toolbar img {
+      padding: 2px;
+      margin: 0px;
+    }
+  </style>
+</body>
+
 </html>
